@@ -57,4 +57,3 @@ btn.addEventListener('click', () => {
   };
   reader.readAsDataURL(file);
 });
-//
