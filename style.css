@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 /* Set a background color and font for the whole page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0074d9;
+    background-color: hsl(14, 100%, 62%);
     color: #222;
     line-height: 1.6;
     padding: 20px;
@@ -25,7 +25,7 @@ body {
 }
 
 #dropArea {
-    border: 2px dashed #6a0dad;
+    border: 2px dashed #ca0620;
     padding: 2rem;
     margin: 1rem auto;
     width: 80%;
@@ -43,7 +43,7 @@ body {
 #convertBtn, #downloadLink {
     margin: 1rem;
     padding: 0.75rem 1.5rem;
-    background-color: #6a0dad;
+    background-color: #9c0419;
     color: white;
     border: none;
     border-radius: 8px;
@@ -53,7 +53,7 @@ body {
 }
 
 #convertBtn:hover, #downloadLink:hover {
-    background-color: #5300b2;
+    background-color: #ac0226;
 }
 
 input[type="file"], select {
