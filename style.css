@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li {
 /* Set a background color and font for the whole page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #0074d9;
     color: #222;
     line-height: 1.6;
     padding: 20px;
@@ -18,8 +18,68 @@ body {
 .container {
     max-width: 800px;
     margin: 40px auto;
-    background: #fff;
+    background: hsl(197, 94%, 47%);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#dropArea {
+    border: 2px dashed #6a0dad;
+    padding: 2rem;
+    margin: 1rem auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 12px;
+    background-color: hsl(197, 96%, 50%);
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+#dropArea:hover {
+    background-color: #086ef3;
+}
+
+#convertBtn, #downloadLink {
+    margin: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#convertBtn:hover, #downloadLink:hover {
+    background-color: #5300b2;
+}
+
+input[type="file"], select {
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#canvas, #convertedImg {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin: 1rem auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: hsl(207, 96%, 50%);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    #dropArea {
+        width: 98%;
+        padding: 1rem;
+    }
 }
