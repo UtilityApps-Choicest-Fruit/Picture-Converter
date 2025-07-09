@@ -7,7 +7,7 @@ const previewImg = document.getElementById('convertedImg');
 const formatSelect = document.getElementById('format');
 const dropArea = document.getElementById('dropArea');
 
-
+// DRAG + DROP FUNCTIONALITY
 dropArea.addEventListener('dragover', (e) => {
   e.preventDefault();
   dropArea.style.background = '#f0e6ff';
@@ -23,7 +23,7 @@ dropArea.addEventListener('drop', (e) => {
   input.files = e.dataTransfer.files;
 });
 
-
+// CONVERSION FUNCTION
 btn.addEventListener('click', () => {
   const file = input.files[0];
   if (!file) {
