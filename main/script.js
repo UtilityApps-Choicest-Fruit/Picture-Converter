@@ -23,7 +23,7 @@ dropArea.addEventListener('drop', (e) => {
   input.files = e.dataTransfer.files;
 });
 
-// CONVERSION FUNCTION
+
 btn.addEventListener('click', () => {
   const file = input.files[0];
   if (!file) {
