@@ -7,7 +7,7 @@ const previewImg = document.getElementById('convertedImg');
 const formatSelect = document.getElementById('format');
 const dropArea = document.getElementById('dropArea');
 
-// DRAG + DROP FUNCTIONALITY
+
 dropArea.addEventListener('dragover', (e) => {
   e.preventDefault();
   dropArea.style.background = '#f0e6ff';
