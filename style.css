@@ -5,81 +5,131 @@ body, h1, h2, h3, p, ul, li {
     box-sizing: border-box;
 }
 
-/* Set a background color and font for the whole page */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0074d9;
-    color: #222;
-    line-height: 1.6;
-    padding: 20px;
+/* Color palette */
+:root {
+  --primary: #6a0dad;
+  --accent: #00bcd4;
+  --background: #f5f7fa;
+  --surface: #fff;
+  --text: #22223b;
 }
 
-/* Example container styling */
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    background: hsl(197, 94%, 47%);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+/* Set a background color and font for the whole page */
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #8C92AC 0%, #8C92AC 60%, #8C92AC 100%);
+  /* #d1c4e9 is a soft lavender that pairs well with your purple */
+}
+
+h1 {
+  color: #6a0dad;
 }
 
 #dropArea {
-    border: 2px dashed #6a0dad;
-    padding: 2rem;
-    margin: 1rem auto;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 12px;
-    background-color: hsl(197, 96%, 50%);
-    transition: background-color 0.3s;
-    text-align: center;
+  border: 2.5px dashed #6a0dad;
+  background: hsl(252, 100%, 97%);
+  color: #6a0dad;
+  font-size: 1.1rem;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  border-radius: 16px;
+  transition: background 0.3s, color 0.3s;
 }
 
 #dropArea:hover {
-    background-color: #086ef3;
+  background: #e0eafc;
+  color: #00bcd4;
+}
+
+#canvas {
+  max-width: 300px;
+  max-height: 300px;
+  display: block;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
 }
 
 #convertBtn, #downloadLink {
-    margin: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #6a0dad;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+  background: linear-gradient(90deg, #6a0dad 60%, #00bcd4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(106,13,173,0.08);
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 #convertBtn:hover, #downloadLink:hover {
-    background-color: #5300b2;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,188,212,0.15);
+  background: linear-gradient(90deg, #5300b2 60%, #0097a7 100%);
 }
 
-input[type="file"], select {
-    margin: 1rem;
-    padding: 0.5rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+#downloadLink {
+  display: none;
+  text-decoration: none;
 }
 
-#canvas, #convertedImg {
-    max-width: 300px;
-    max-height: 300px;
-    display: block;
-    margin: 1rem auto;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background: hsl(207, 96%, 50%);
+select, input[type="file"] {
+  margin: 1rem;
+}
+
+#imgBox {
+  background: #fff;
+  border: 2px solid #00bcd4;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.08);
+  padding: 1rem;
+  max-width: 320px;
+  margin: 1.5rem auto;
+  display: none; /* Hide by default */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#imgBox.show {
+  display: block;
+  opacity: 1;
+}
+
+#convertedImg {
+  margin: 0;
+  max-width: 300px;
+  display: block;
+  border-radius: 12px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(106,13,173,0.10);
+  padding: 2.5rem 2rem;
+  max-width: 480px;
+  margin: 2.5rem auto;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+/* Add spacing between sections */
+section, .container > *:not(:last-child) {
+    margin-bottom: 1.5rem;
 }
 
 @media (max-width: 600px) {
-    .container {
-        padding: 15px;
-        margin: 10px;
-    }
-    #dropArea {
-        width: 98%;
-        padding: 1rem;
-    }
+  .container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  #dropArea {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
