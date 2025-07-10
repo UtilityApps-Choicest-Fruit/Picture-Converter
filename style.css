@@ -133,3 +133,32 @@ section, .container > *:not(:last-child) {
     font-size: 1rem;
   }
 }
+
+/* ...existing code... */
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #6a0dad;
+  padding: 1rem 0;
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 2rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background: #00bcd4;
+  color: #22223b;
+}
+/* ...existing code... */
