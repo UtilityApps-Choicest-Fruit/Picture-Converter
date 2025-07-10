@@ -1,23 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PICTURE CONVERTER</title>
-    </head>
-    <body>
-
-        <header>
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="./about.html">About</a>
-            <a href="contacts.html">Contacts</a>
-        </nav>
-    </header>
-
-
-        <script src="script.js"></script>
-    </body>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -26,6 +8,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!--Image App Header-->
+  <header>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+  </header>
   <div class="container">
     <h1>🖼️ Image Converter</h1>
     <input type="file" id="imageInput" accept="image/*">
@@ -38,13 +28,12 @@
     </select>
     <br />
     <button id="convertBtn">Convert</button>
-    <a id="downloadLink" download="converted.png"> Download Converted Image</a>
+    <a id="downloadLink" download="converted.png" style="display:none;">Download Converted Image</a>
     <canvas id="canvas" style="display:none;"></canvas>
     <div id="imgBox">
       <img id="convertedImg" alt="Converted Image" />
     </div>
   </div>
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
-  main
 </html>
