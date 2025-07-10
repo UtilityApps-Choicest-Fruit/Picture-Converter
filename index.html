@@ -14,4 +14,34 @@
 
         <script src="script.js"></script>
     </body>
+=======
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Converter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🖼️ Image Converter</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <div id="dropArea">⬇️ Drop an image here or use the upload button above</div>
+    <label for="format">Choose Format:</label>
+    <select id="format">
+      <option value="png">PNG</option>
+      <option value="jpeg">JPEG</option>
+      <option value="webp">WebP</option>
+    </select>
+    <br />
+    <button id="convertBtn">Convert</button>
+    <a id="downloadLink" download="converted.png"> Download Converted Image</a>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <div id="imgBox">
+      <img id="convertedImg" alt="Converted Image" />
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+  main
 </html>

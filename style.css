@@ -1,0 +1,135 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color palette */
+:root {
+  --primary: #6a0dad;
+  --accent: #00bcd4;
+  --background: #f5f7fa;
+  --surface: #fff;
+  --text: #22223b;
+}
+
+/* Set a background color and font for the whole page */
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #8C92AC 0%, #8C92AC 60%, #8C92AC 100%);
+  /* #d1c4e9 is a soft lavender that pairs well with your purple */
+}
+
+h1 {
+  color: #6a0dad;
+}
+
+#dropArea {
+  border: 2.5px dashed #6a0dad;
+  background: hsl(252, 100%, 97%);
+  color: #6a0dad;
+  font-size: 1.1rem;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  border-radius: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#dropArea:hover {
+  background: #e0eafc;
+  color: #00bcd4;
+}
+
+#canvas {
+  max-width: 300px;
+  max-height: 300px;
+  display: block;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+}
+
+#convertBtn, #downloadLink {
+  background: linear-gradient(90deg, #6a0dad 60%, #00bcd4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(106,13,173,0.08);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#convertBtn:hover, #downloadLink:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,188,212,0.15);
+  background: linear-gradient(90deg, #5300b2 60%, #0097a7 100%);
+}
+
+#downloadLink {
+  display: none;
+  text-decoration: none;
+}
+
+select, input[type="file"] {
+  margin: 1rem;
+}
+
+#imgBox {
+  background: #fff;
+  border: 2px solid #00bcd4;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.08);
+  padding: 1rem;
+  max-width: 320px;
+  margin: 1.5rem auto;
+  display: none; /* Hide by default */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#imgBox.show {
+  display: block;
+  opacity: 1;
+}
+
+#convertedImg {
+  margin: 0;
+  max-width: 300px;
+  display: block;
+  border-radius: 12px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(106,13,173,0.10);
+  padding: 2.5rem 2rem;
+  max-width: 480px;
+  margin: 2.5rem auto;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+/* Add spacing between sections */
+section, .container > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  #dropArea {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
